@@ -27,8 +27,12 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
     alt-shift-9 = ['move-node-to-workspace 9', 'workspace 9']
     alt-shift-0 = ['move-node-to-workspace 0', 'workspace 0']
 
-    alt-tab = ['focus dfs-next --boundaries-action wrap-around-the-workspace', 'mode main']
-    alt-shift-tab = ['swap dfs-next --wrap-around']
+    alt-h = 'focus left'
+    alt-l = 'focus right'
+
+    alt-shift-h = 'move left'
+    alt-shift-l = 'move right'
+
     alt-r = 'reload-config'
 
     # On ultra wide monitors, make single windows floating and put them to center with a bit help from old friend, Rectangle app.

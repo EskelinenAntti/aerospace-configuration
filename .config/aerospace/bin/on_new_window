@@ -1,11 +1,13 @@
 #!/bin/bash
 
+MONITOR=$(aerospace list-monitors --focused --format "%{monitor-name}")
 if [[ "$MONITOR" != "T34w-30" ]]; then
     exit 0
 fi
 
 # Get the layout of the currently focused window.
 LAYOUT=$(aerospace list-windows --focused --format '%{window-parent-container-layout}' 2>/dev/null)
+
 
 # If the window is floating it is a dialog, do nothing
 if [[ "$LAYOUT" == "floating" ]]; then

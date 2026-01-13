@@ -2,7 +2,6 @@
 
 WINDOW_COUNT=$(aerospace list-windows --workspace focused --count)
 MONITOR=$(aerospace list-monitors --focused --format "%{monitor-name}")
-echo $MONITOR
 if [[ "$MONITOR" != "T34w-30" ]]; then
     exit 0
 fi

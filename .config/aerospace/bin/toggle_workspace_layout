@@ -1,5 +1,4 @@
 #!/bin/bash
-
 WINDOW_COUNT=$(aerospace list-windows --workspace focused --count) 
 MONITOR=$(aerospace list-monitors --focused --format "%{monitor-name}") 
 

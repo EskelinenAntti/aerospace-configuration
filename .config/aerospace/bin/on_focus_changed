@@ -1,0 +1,13 @@
+#!/bin/bash
+
+WINDOW_COUNT=$(aerospace list-windows --workspace focused --count)
+MONITOR=$(aerospace list-monitors --focused --format "%{monitor-name}")
+echo $MONITOR
+if [[ "$MONITOR" != "T34w-30" ]]; then
+    exit 0
+fi
+
+if [[ "$WINDOW_COUNT" -eq 1 ]]; then
+  aerospace layout floating
+  open -g "rectangle://execute-action?name=center-half"
+fi

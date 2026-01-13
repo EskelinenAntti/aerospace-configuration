@@ -13,7 +13,7 @@ reset-workspace-to-tiling() {
 # If using ultrawide display and there is only one window, 
 # make the single window float and set it to have sensible width
 if [[ "$WINDOW_COUNT" -eq 1 ]]; then
-  aerospace layout floating tiling
+  aerospace layout floating
   open -g "rectangle://execute-action?name=center-half"
 else
   reset-workspace-to-tiling

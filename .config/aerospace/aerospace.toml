@@ -9,7 +9,6 @@ automatically-unhide-macos-hidden-apps = false
     run = 'exec-and-forget ~/.config/aerospace/bin/on_new_window'
 
 [mode.main.binding]
-
     alt-1 = 'workspace 1'
     alt-2 = 'workspace 2'
     alt-3 = 'workspace 3'
@@ -38,6 +37,6 @@ automatically-unhide-macos-hidden-apps = false
     alt-shift-h = 'move left'
     alt-shift-l = 'move right'
 
-    alt-f = 'layout floating tiling'
+    alt-f = ['layout floating tiling', 'exec-and-forget open -g "rectangle://execute-action?name=center-half"']
     alt-r = 'reload-config'
 

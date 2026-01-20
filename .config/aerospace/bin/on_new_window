@@ -1,26 +1,9 @@
 #!/bin/bash
 
-reset_workspace_to_tiling() {
-  for window in $(aerospace list-windows --workspace focused --format "%{window-id}"); do
-    aerospace layout --window-id $window tiling
-  done
-}
-
-MONITOR=$(aerospace list-monitors --focused --format "%{monitor-name}")
-if [[ "$MONITOR" != "T34w-30" ]]; then
-    exit 0
-fi
-
 LAYOUT=$(aerospace list-windows --focused --format '%{window-parent-container-layout}' 2>/dev/null)
 if [[ "$LAYOUT" == "floating" ]]; then
   exit 0
 fi
 
-WINDOW_COUNT=$(aerospace list-windows --workspace focused --count)
-if [[ "$WINDOW_COUNT" -eq 1 ]]; then
-  aerospace layout floating
-  open -g "rectangle://execute-action?name=center-half"
-else
-  reset_workspace_to_tiling
-fi
+"$(dirname "$0")"/on_workspace_changed
 

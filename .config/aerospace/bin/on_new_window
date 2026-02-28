@@ -1,9 +1,0 @@
-#!/bin/bash
-
-LAYOUT=$(aerospace list-windows --focused --format '%{window-parent-container-layout}' 2>/dev/null)
-if [[ "$LAYOUT" == "floating" ]]; then
-  exit 0
-fi
-
-"$(dirname "$0")"/on_workspace_changed
-

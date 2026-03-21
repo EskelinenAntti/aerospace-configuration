@@ -14,20 +14,20 @@ automatically-unhide-macos-hidden-apps = false
     alt-v = 'workspace v'
     alt-b = 'workspace b'
 
-    alt-shift-s = ['move-node-to-workspace s', 'workspace s']
-    alt-shift-d = ['move-node-to-workspace d', 'workspace d']
-    alt-shift-f = ['move-node-to-workspace f', 'workspace f']
-    alt-shift-g = ['move-node-to-workspace g', 'workspace g']
-    alt-shift-x = ['move-node-to-workspace x', 'workspace x']
-    alt-shift-c = ['move-node-to-workspace c', 'workspace c']
-    alt-shift-v = ['move-node-to-workspace v', 'workspace v']
-    alt-shift-b = ['move-node-to-workspace b', 'workspace b']
+    alt-ctrl-s = ['move-node-to-workspace s', 'workspace s']
+    alt-ctrl-d = ['move-node-to-workspace d', 'workspace d']
+    alt-ctrl-f = ['move-node-to-workspace f', 'workspace f']
+    alt-ctrl-g = ['move-node-to-workspace g', 'workspace g']
+    alt-ctrl-x = ['move-node-to-workspace x', 'workspace x']
+    alt-ctrl-c = ['move-node-to-workspace c', 'workspace c']
+    alt-ctrl-v = ['move-node-to-workspace v', 'workspace v']
+    alt-ctrl-b = ['move-node-to-workspace b', 'workspace b']
 
     alt-h = 'focus left'
     alt-l = 'focus right'
 
-    alt-shift-h = 'move left'
-    alt-shift-l = 'move right'
+    alt-ctrl-h = 'move left'
+    alt-ctrl-l = 'move right'
 
     alt-space = ['layout floating tiling', 'exec-and-forget open -g "rectangle://execute-action?name=center-half"']
     alt-r = 'reload-config'

@@ -5,30 +5,45 @@ on-focused-monitor-changed = 'move-mouse monitor-lazy-center'
 automatically-unhide-macos-hidden-apps = false
 
 [mode.main.binding]
-    alt-s = 'workspace s'
-    alt-d = 'workspace d'
-    alt-f = 'workspace f'
-    alt-g = 'workspace g'
-    alt-x = 'workspace x'
-    alt-c = 'workspace c'
-    alt-v = 'workspace v'
-    alt-b = 'workspace b'
+    alt-space = 'mode switch'
+    ctrl-alt-space = 'mode move'
 
-    alt-ctrl-s = ['move-node-to-workspace s', 'workspace s']
-    alt-ctrl-d = ['move-node-to-workspace d', 'workspace d']
-    alt-ctrl-f = ['move-node-to-workspace f', 'workspace f']
-    alt-ctrl-g = ['move-node-to-workspace g', 'workspace g']
-    alt-ctrl-x = ['move-node-to-workspace x', 'workspace x']
-    alt-ctrl-c = ['move-node-to-workspace c', 'workspace c']
-    alt-ctrl-v = ['move-node-to-workspace v', 'workspace v']
-    alt-ctrl-b = ['move-node-to-workspace b', 'workspace b']
+[mode.switch.binding]
+    alt-space = 'mode main'
+    esc = 'mode main'
 
-    alt-h = 'focus left'
-    alt-l = 'focus right'
+    1 = ['workspace 1', 'mode main']
+    2 = ['workspace 2', 'mode main']
+    3 = ['workspace 3', 'mode main']
+    4 = ['workspace 4', 'mode main']
+    5 = ['workspace 5', 'mode main']
+    6 = ['workspace 6', 'mode main']
+    7 = ['workspace 7', 'mode main']
+    8 = ['workspace 8', 'mode main']
+    9 = ['workspace 9', 'mode main']
+    0 = ['workspace 0', 'mode main']
 
-    alt-ctrl-h = 'move left'
-    alt-ctrl-l = 'move right'
+    h = ['focus left', 'mode main']
+    l = ['focus right', 'mode main']
 
-    alt-space = ['layout floating tiling', 'exec-and-forget open -g "rectangle://execute-action?name=center-half"']
-    alt-r = 'reload-config'
+    enter = ['layout tiles accordion', 'mode main']
+    space = ['layout floating tiling', 'exec-and-forget open -g "rectangle://execute-action?name=center-half"', 'mode main']
+    r = ['reload-config', 'mode main']
 
+[mode.move.binding]
+    alt-space = 'mode main'
+    esc = 'mode main'
+
+    1 = ['move-node-to-workspace 1', 'workspace 1', 'mode main']
+    2 = ['move-node-to-workspace 2', 'workspace 2', 'mode main']
+    3 = ['move-node-to-workspace 3', 'workspace 3', 'mode main']
+    4 = ['move-node-to-workspace 4', 'workspace 4', 'mode main']
+    5 = ['move-node-to-workspace 5', 'workspace 5', 'mode main']
+    6 = ['move-node-to-workspace 6', 'workspace 6', 'mode main']
+    7 = ['move-node-to-workspace 7', 'workspace 7', 'mode main']
+    8 = ['move-node-to-workspace 8', 'workspace 8', 'mode main']
+    9 = ['move-node-to-workspace 9', 'workspace 9', 'mode main']
+    0 = ['move-node-to-workspace 0', 'workspace 0', 'mode main']
+
+    h = ['move left', 'mode main']
+    l = ['move right', 'mode main']
